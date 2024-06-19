@@ -1,0 +1,425 @@
+{
+    "cities": [
+      {
+        "_id": "60c72b2f9b1d8e20b8e41d45",
+        "name": "New York",
+        "country": "USA",
+        "population": 8419000,
+        "gdp_per_capita": 85000,
+        "weather": {
+          "temperature": 27,
+          "description": "Sunny",
+          "forecast_date": "2024-06-18"
+        },
+        "exchange_rates": [
+          {
+            "base_currency": "USD",
+            "target_currency": "EUR",
+            "rate": 0.85,
+            "retrieval_date": "2024-06-18"
+          }
+        ]
+      },
+      {
+        "_id": "60c72b2f9b1d8e20b8e41d46",
+        "name": "London",
+        "country": "UK",
+        "population": 8982000,
+        "gdp_per_capita": 70000,
+        "weather": {
+          "temperature": 18,
+          "description": "Cloudy",
+          "forecast_date": "2024-06-18"
+        },
+        "exchange_rates": [
+          {
+            "base_currency": "GBP",
+            "target_currency": "USD",
+            "rate": 1.35,
+            "retrieval_date": "2024-06-18"
+          }
+        ]
+      },
+      {
+        "_id": "60c72b2f9b1d8e20b8e41d47",
+        "name": "Tokyo",
+        "country": "Japan",
+        "population": 13960000,
+        "gdp_per_capita": 50000,
+        "weather": {
+          "temperature": 22,
+          "description": "Rainy",
+          "forecast_date": "2024-06-18"
+        },
+        "exchange_rates": [
+          {
+            "base_currency": "JPY",
+            "target_currency": "USD",
+            "rate": 0.0092,
+            "retrieval_date": "2024-06-18"
+          }
+        ]
+      },
+      {
+        "_id": "60c72b2f9b1d8e20b8e41d48",
+        "name": "Paris",
+        "country": "France",
+        "population": 2148000,
+        "gdp_per_capita": 62000,
+        "weather": {
+          "temperature": 24,
+          "description": "Partly Cloudy",
+          "forecast_date": "2024-06-18"
+        },
+        "exchange_rates": [
+          {
+            "base_currency": "EUR",
+            "target_currency": "USD",
+            "rate": 1.18,
+            "retrieval_date": "2024-06-18"
+          }
+        ]
+      },
+      {
+        "_id": "60c72b2f9b1d8e20b8e41d49",
+        "name": "Sydney",
+        "country": "Australia",
+        "population": 5230000,
+        "gdp_per_capita": 55000,
+        "weather": {
+          "temperature": 15,
+          "description": "Windy",
+          "forecast_date": "2024-06-18"
+        },
+        "exchange_rates": [
+          {
+            "base_currency": "AUD",
+            "target_currency": "USD",
+            "rate": 0.75,
+            "retrieval_date": "2024-06-18"
+          }
+        ]
+      },
+      {
+        "_id": "60c72b2f9b1d8e20b8e41d50",
+        "name": "Toronto",
+        "country": "Canada",
+        "population": 2930000,
+        "gdp_per_capita": 45000,
+        "weather": {
+          "temperature": 20,
+          "description": "Sunny",
+          "forecast_date": "2024-06-18"
+        },
+        "exchange_rates": [
+          {
+            "base_currency": "CAD",
+            "target_currency": "USD",
+            "rate": 0.80,
+            "retrieval_date": "2024-06-18"
+          }
+        ]
+      },
+      {
+        "_id": "60c72b2f9b1d8e20b8e41d51",
+        "name": "Berlin",
+        "country": "Germany",
+        "population": 3769000,
+        "gdp_per_capita": 60000,
+        "weather": {
+          "temperature": 19,
+          "description": "Showers",
+          "forecast_date": "2024-06-18"
+        },
+        "exchange_rates": [
+          {
+            "base_currency": "EUR",
+            "target_currency": "USD",
+            "rate": 1.18,
+            "retrieval_date": "2024-06-18"
+          }
+        ]
+      },
+      {
+        "_id": "60c72b2f9b1d8e20b8e41d52",
+        "name": "Dubai",
+        "country": "UAE",
+        "population": 3331000,
+        "gdp_per_capita": 45000,
+        "weather": {
+          "temperature": 38,
+          "description": "Sunny",
+          "forecast_date": "2024-06-18"
+        },
+        "exchange_rates": [
+          {
+            "base_currency": "AED",
+            "target_currency": "USD",
+            "rate": 0.27,
+            "retrieval_date": "2024-06-18"
+          }
+        ]
+      },
+      {
+        "_id": "60c72b2f9b1d8e20b8e41d53",
+        "name": "Singapore",
+        "country": "Singapore",
+        "population": 5639000,
+        "gdp_per_capita": 90000,
+        "weather": {
+          "temperature": 30,
+          "description": "Humid",
+          "forecast_date": "2024-06-18"
+        },
+        "exchange_rates": [
+          {
+            "base_currency": "SGD",
+            "target_currency": "USD",
+            "rate": 0.74,
+            "retrieval_date": "2024-06-18"
+          }
+        ]
+      },
+      {
+        "_id": "60c72b2f9b1d8e20b8e41d54",
+        "name": "Hong Kong",
+        "country": "China",
+        "population": 7482000,
+        "gdp_per_capita": 64000,
+        "weather": {
+          "temperature": 29,
+          "description": "Stormy",
+          "forecast_date": "2024-06-18"
+        },
+        "exchange_rates": [
+          {
+            "base_currency": "HKD",
+            "target_currency": "USD",
+            "rate": 0.13,
+            "retrieval_date": "2024-06-18"
+          }
+        ]
+      },
+      {
+        "_id": "60c72b2f9b1d8e20b8e41d55",
+        "name": "Rome",
+        "country": "Italy",
+        "population": 2873000,
+        "gdp_per_capita": 40000,
+        "weather": {
+          "temperature": 28,
+          "description": "Sunny",
+          "forecast_date": "2024-06-18"
+        },
+        "exchange_rates": [
+          {
+            "base_currency": "EUR",
+            "target_currency": "USD",
+            "rate": 1.18,
+            "retrieval_date": "2024-06-18"
+          }
+        ]
+      },
+      {
+        "_id": "60c72b2f9b1d8e20b8e41d56",
+        "name": "Barcelona",
+        "country": "Spain",
+        "population": 5543000,
+        "gdp_per_capita": 45000,
+        "weather": {
+          "temperature": 26,
+          "description": "Sunny",
+          "forecast_date": "2024-06-18"
+        },
+        "exchange_rates": [
+          {
+            "base_currency": "EUR",
+            "target_currency": "USD",
+            "rate": 1.18,
+            "retrieval_date": "2024-06-18"
+          }
+        ]
+      },
+      {
+        "_id": "60c72b2f9b1d8e20b8e41d57",
+        "name": "Moscow",
+        "country": "Russia",
+        "population": 11920000,
+        "gdp_per_capita": 25000,
+        "weather": {
+          "temperature": 17,
+          "description": "Partly Cloudy",
+          "forecast_date": "2024-06-18"
+        },
+        "exchange_rates": [
+          {
+            "base_currency": "RUB",
+            "target_currency": "USD",
+            "rate": 0.013,
+            "retrieval_date": "2024-06-18"
+          }
+        ]
+      },
+      {
+        "_id": "60c72b2f9b1d8e20b8e41d58",
+        "name": "Mumbai",
+        "country": "India",
+        "population": 12440000,
+        "gdp_per_capita": 8000,
+        "weather": {
+          "temperature": 32,
+          "description": "Hot and Humid",
+          "forecast_date": "2024-06-18"
+        },
+        "exchange_rates": [
+          {
+            "base_currency": "INR",
+            "target_currency": "USD",
+            "rate": 0.013,
+            "retrieval_date": "2024-06-18"
+          }
+        ]
+      },
+      {
+        "_id": "60c72b2f9b1d8e20b8e41d59",
+        "name": "Beijing",
+        "country": "China",
+        "population": 21540000,
+        "gdp_per_capita": 12000,
+        "weather": {
+          "temperature": 25,
+          "description": "Sunny",
+          "forecast_date": "2024-06-18"
+        },
+        "exchange_rates": [
+          {
+            "base_currency": "CNY",
+            "target_currency": "USD",
+            "rate": 0.15,
+            "retrieval_date": "2024-06-18"
+          }
+        ]
+      },
+      {
+        "_id": "60c72b2f9b1d8e20b8e41d60",
+        "name": "Buenos Aires",
+        "country": "Argentina",
+        "population": 2890000,
+        "gdp_per_capita": 20000,
+        "weather": {
+          "temperature": 16,
+          "description": "Cool",
+          "forecast_date": "2024-06-18"
+        },
+        "exchange_rates": [
+          {
+            "base_currency": "ARS",
+            "target_currency": "USD",
+            "rate": 0.011,
+            "retrieval_date": "2024-06-18"
+          }
+        ]
+      },
+      {
+        "_id": "60c72b2f9b1d8e20b8e41d61",
+        "name": "Cape Town",
+        "country": "South Africa",
+        "population": 4337000,
+        "gdp_per_capita": 18000,
+        "weather": {
+          "temperature": 14,
+          "description": "Windy",
+          "forecast_date": "2024-06-18"
+        },
+        "exchange_rates": [
+          {
+            "base_currency": "ZAR",
+            "target_currency": "USD",
+            "rate": 0.069,
+            "retrieval_date": "2024-06-18"
+          }
+        ]
+      },
+      {
+        "_id": "60c72b2f9b1d8e20b8e41d62",
+        "name": "Bangkok",
+        "country": "Thailand",
+        "population": 10510000,
+        "gdp_per_capita": 16000,
+        "weather": {
+          "temperature": 31,
+          "description": "Humid",
+          "forecast_date": "2024-06-18"
+        },
+        "exchange_rates": [
+          {
+            "base_currency": "THB",
+            "target_currency": "USD",
+            "rate": 0.032,
+            "retrieval_date": "2024-06-18"
+          }
+        ]
+      },
+      {
+        "_id": "60c72b2f9b1d8e20b8e41d63",
+        "name": "Lagos",
+        "country": "Nigeria",
+        "population": 14000000,
+        "gdp_per_capita": 6000,
+        "weather": {
+          "temperature": 28,
+          "description": "Partly Cloudy",
+          "forecast_date": "2024-06-18"
+        },
+        "exchange_rates": [
+          {
+            "base_currency": "NGN",
+            "target_currency": "USD",
+            "rate": 0.0024,
+            "retrieval_date": "2024-06-18"
+          }
+        ]
+      },
+      {
+        "_id": "60c72b2f9b1d8e20b8e41d64",
+        "name": "Istanbul",
+        "country": "Turkey",
+        "population": 15460000,
+        "gdp_per_capita": 10500,
+        "weather": {
+          "temperature": 23,
+          "description": "Clear",
+          "forecast_date": "2024-06-18"
+        },
+        "exchange_rates": [
+          {
+            "base_currency": "TRY",
+            "target_currency": "USD",
+            "rate": 0.11,
+            "retrieval_date": "2024-06-18"
+          }
+        ]
+      },
+      {
+        "_id": "60c72b2f9b1d8e20b8e41d65",
+        "name": "Cairo",
+        "country": "Egypt",
+        "population": 10230000,
+        "gdp_per_capita": 12000,
+        "weather": {
+          "temperature": 34,
+          "description": "Hot",
+          "forecast_date": "2024-06-18"
+        },
+        "exchange_rates": [
+          {
+            "base_currency": "EGP",
+            "target_currency": "USD",
+            "rate": 0.064,
+            "retrieval_date": "2024-06-18"
+          }
+        ]
+      }
+    ]
+  }
+  
