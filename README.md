@@ -1,8 +1,36 @@
-# React + Vite
+# Travel Assistant Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This React application serves as a frontend for the Travel Assistant, allowing users to search for cities and their details, as well as register new users. It consumes the Spring Boot REST API.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The Travel Assistant frontend provides an interface for users to:
+
+- Search for cities and retrieve details such as weather data, exchange rate data, population, and GDP per capita.
+- Register new users.
+
+## Features
+
+- [x] Searching for cities
+- [ ] Registering a user (minimally achieved)
+- [ ] Authentication/Sign in (Not achieved)
+
+## Installation and Usage
+
+### Prerequisites
+
+- Node.js (v14 or higher recommended)
+- npm (v6 or higher recommended)
+
+### Running in Development Mode
+
+1. Clone the repository: `git clone <repository-url>
+cd <repository-name>`
+
+2. Install dependencies: `npm install`
+
+3. Start the development server:`npm run dev`
+
+The application will start on `http://localhost:3000`.
+
+4. Access the application in your browser at `http://localhost:3000`.
