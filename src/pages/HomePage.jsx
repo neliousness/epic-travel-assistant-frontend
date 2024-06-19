@@ -1,33 +1,30 @@
 import React, { useState, useEffect } from "react";
 import Hero from "../components/Hero";
 import CityListings from "../components/CityListings";
+import { searchCity } from "../utils/ApiHelper";
 
-const HomePage = ({ searchCity }) => {
+const HomePage = () => {
   const [cities, setCities] = useState([]);
-  const [loading, setLoading] = useState(false); // Initially, loading is false
+  const [loading, setLoading] = useState(true);
 
-  const initLoad = () => {
-    useEffect(() => {
-      const fetchCities = async () => {
-        try {
-          const data = await searchCity('');
-          setCities(data);
-          console.log(data);
-        } catch (error) {
-          console.log("Error fetching data", error);
-        } finally {
-          setLoading(false);
-        }
-      };
-  
-      fetchCities();
-    }, []);
-  }
+  useEffect(() => {
+    const fetchCities = async () => {
+      try {
+        const data = await searchCity('');
+        setCities(data);
+        console.log(data);
+      } catch (error) {
+        console.log("Error fetching data", error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  initLoad()
+    fetchCities();
+  }, []);
 
   const handleSearch = async (name) => {
-    setLoading(true); // Set loading state to true before fetching data
+    setLoading(true);
 
     try {
       const data = await searchCity(name);
@@ -36,7 +33,7 @@ const HomePage = ({ searchCity }) => {
     } catch (error) {
       console.log("Error fetching data", error);
     } finally {
-      setLoading(false); // Set loading state to false after fetching data
+      setLoading(false);
     }
   };
 

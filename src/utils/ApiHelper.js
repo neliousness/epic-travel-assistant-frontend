@@ -5,9 +5,9 @@ import { isBlank } from "./util";
 export const searchCity = async (cityName = "") => {
   
   try {
-    let apiUrl = `/api/cities?_limit=${initCitiesLimit}`;
+    let apiUrl = `/api/city?name=`;
     if (!isBlank(cityName)) {
-      apiUrl = `/api/cities?name=${cityName}`;
+      apiUrl = `/api/city?name=${cityName}`;
     }
     const res = await fetch(apiUrl);
     if (!res.ok) {
@@ -20,3 +20,20 @@ export const searchCity = async (cityName = "") => {
     throw error;
   }
 };
+
+export const registerUser = async (newUser) => {
+  const res = await fetch("/api/user/register", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(newUser)
+  });
+};
+
+export const signIn = async (loginData) => {
+  const res = await fetch("/api/user/signIn", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(loginData)
+  });
+};
+

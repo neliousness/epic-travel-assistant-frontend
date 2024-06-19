@@ -6,6 +6,8 @@ const CityListing = ({ city }) => {
 
   const color = appConfig.theme.primaryColor;
 
+  const rates = city.exchangeRates.slice(0,2)
+
   return (
     <div className="bg-white rounded-xl shadow-md p-4 border border-transparent hover:border-blue-500 transition-all duration-300">
       {/* Top section - City information */}
@@ -14,8 +16,8 @@ const CityListing = ({ city }) => {
         <div className="text-gray-600 mb-2 flex items-center">
           <FaMapMarkerAlt className="mr-1" /> {city.country}
         </div>
-        <p className="mt-2">Population: {city.population.toLocaleString()}</p>
-        <p className="mt-2">GDP per Capita: ${city.gdp_per_capita.toLocaleString()}</p>
+        <p className="mt-2">Population: {city.population}</p>
+        <p className="mt-2">GDP per Capita: ${city.gdpPerCapita}</p>
       </div>
 
       {/* Bottom section*/}
@@ -29,20 +31,20 @@ const CityListing = ({ city }) => {
           <p className="mt-2 flex items-center">
             <FaSun className="mr-2" /> Description: {city.weather.description}
           </p>
-          <p className="mt-2">Forecast Date: {new Date(city.weather.forecast_date).toLocaleDateString()}</p>
+          <p className="mt-2">Forecast Date: {new Date().toLocaleDateString()}</p>
         </div>
 
         {/* Bottom right - Currency information */}
-        <div className={`w-full lg:w-1/2 bg-${color}-100 rounded-lg p-4`}>
+        <div className={`w-full lg:w-1/2 bg-blue-100 rounded-lg p-4`}>
           <h4 className="text-lg font-bold flex items-center">
             <FaMoneyBillWave className="mr-2" /> Exchange Rates
           </h4>
-          {city.exchange_rates.map((rate, index) => (
+          {rates.map((rate, index) => (
             <div key={index} className="mt-2">
-              <p>Base: {rate.base_currency}</p>
-              <p>Target: {rate.target_currency}</p>
+              <p>Base: {rate.baseCurrency}</p>
+              <p>Target: {rate.targetCurrency}</p>
               <p>Rate: {rate.rate}</p>
-              <p>Date: {new Date(rate.retrieval_date).toLocaleDateString()}</p>
+              <p>Date: {new Date(rate.retrievalDate).toLocaleDateString()}</p>
             </div>
           ))}
         </div>

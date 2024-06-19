@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import Spinner from "./Spinner";
 import CityListing from "./CityListing";
 
