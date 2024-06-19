@@ -1,10 +1,8 @@
-import { useState } from "react";
 import { FaMapMarkerAlt, FaTemperatureHigh, FaSun, FaMoneyBillWave } from 'react-icons/fa';
 
 import { appConfig } from "../utils/constants";
 
 const CityListing = ({ city }) => {
-  const [showFullDescription, setShowFullDescription] = useState(false);
 
   const color = appConfig.theme.primaryColor;
 
@@ -20,7 +18,7 @@ const CityListing = ({ city }) => {
         <p className="mt-2">GDP per Capita: ${city.gdp_per_capita.toLocaleString()}</p>
       </div>
 
-      {/* Bottom section divided into two halves */}
+      {/* Bottom section*/}
       <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
         {/* Bottom left - Weather information */}
         <div className="w-full lg:w-1/2 bg-gray-100 rounded-lg p-4">

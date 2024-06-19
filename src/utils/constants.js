@@ -8,3 +8,6 @@ export const appConfig = {
     },
     logo: logo
 };
+
+export const initCitiesLimit = 6;
+export const EMPTY_STRING = "";
