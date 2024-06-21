@@ -13,7 +13,7 @@ The Travel Assistant frontend provides an interface for users to:
 
 - [x] Searching for cities
 - [ ] Registering a user (minimally achieved)
-- [ ] Authentication/Sign in (Not achieved)
+- [x] Authentication/Sign in (Not achieved)
 
 ## Installation and Usage
 
@@ -34,3 +34,4 @@ cd <repository-name>`
 The application will start on `http://localhost:3000`.
 
 4. Access the application in your browser at `http://localhost:3000`.
+5. Remember to run the backend server as well (https://github.com/neliousness/epic-travel-assistant-backend)
