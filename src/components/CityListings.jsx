@@ -2,8 +2,6 @@ import Spinner from "./Spinner";
 import CityListing from "./CityListing";
 
 const CityListings = ({ cities, loading }) => {
-  
-
   return (
     <section className="bg-blue-50 px-4 py-10">
       <div className="container-xl lg:container m-auto">

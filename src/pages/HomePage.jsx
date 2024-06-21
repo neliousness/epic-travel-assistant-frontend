@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Hero from "../components/Hero";
 import CityListings from "../components/CityListings";
-import { searchCity } from "../utils/ApiHelper";
+import { searchCity } from "../utils/apiHelper";
 
 const HomePage = () => {
   const [cities, setCities] = useState([]);
