@@ -10,8 +10,17 @@ import LoginPage from "./pages/LoginPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import RegisterPage from "./pages/RegisterPage";
 import CityDetailsPage from "./pages/CityDetailsPage";
+import { useEffect } from "react";
+import { useGlobalDispatch } from "./providers/GlobalState";
+import { setupInterceptors } from "./utils/apiHelper";
 
 const App = () => {
+
+  const dispatch = useGlobalDispatch();
+
+  useEffect(() => {
+    setupInterceptors(dispatch);
+  }, [dispatch]);
 
   const router = createBrowserRouter(
     createRoutesFromElements(

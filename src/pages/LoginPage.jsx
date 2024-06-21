@@ -1,28 +1,34 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { signIn } from "../utils/ApiHelper";
+import { signIn } from "../utils/apiHelper";
 import { toast } from "react-toastify";
+import { useGlobalDispatch } from "../providers/GlobalState";
+
 
 const LoginPage = () => {
-
-
   const navigate = useNavigate();
+  const dispatch = useGlobalDispatch();
 
-  const [userEmail, setUserEmail] = useState('');
-  const [userPassword, setUserPassword] = useState('');
+  const [userEmail, setUserEmail] = useState("");
+  const [userPassword, setUserPassword] = useState("");
+
+  const handleSuccess = (name) => {
+    toast.success(`Signed in, Welcome back ${name}`);
+    return navigate("/");
+  };
+
+  const handleError = (error) => {
+    toast.error(`${error}`);
+  };
 
   const submitForm = (e) => {
     e.preventDefault();
     const loginData = {
-      userEmail,
-      userPassword,
+      email: userEmail,
+      password: userPassword,
     };
 
-    signIn(loginData);
-
-    toast.success("Signed in")
-
-    return navigate("/");
+    signIn({ loginData, handleSuccess, handleError, dispatch });
   };
 
   return (
@@ -30,7 +36,9 @@ const LoginPage = () => {
       <div className="container m-auto max-w-2xl py-24">
         <div className="bg-white px-6 py-8 mb-4 shadow-md rounded-md border m-4 md:m-0">
           <form onSubmit={submitForm}>
-            <h2 className="text-3xl text-center font-semibold mb-6">Lets Login</h2>
+            <h2 className="text-3xl text-center font-semibold mb-6">
+              Lets Login
+            </h2>
 
             <div className="mb-4">
               <label

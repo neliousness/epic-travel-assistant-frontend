@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { appConfig } from "../utils/constants";
+import { appConfig, debounceDelay } from "../utils/constants";
 import debounce from "lodash.debounce";
 
 const Hero = ({
@@ -7,8 +7,8 @@ const Hero = ({
   subtitle = appConfig.subTitle,
   handleSearch,
 }) => {
-  // Create a debounced version of handleSearch
-  const debouncedHandleSearch = useMemo(() => debounce(handleSearch, 500), [handleSearch]);
+
+  const debouncedHandleSearch = useMemo(() => debounce(handleSearch, debounceDelay), [handleSearch]);
 
   return (
     <>

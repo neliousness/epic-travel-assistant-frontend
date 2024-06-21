@@ -1,31 +1,48 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { registerUser } from "../utils/ApiHelper";
+import { registerUser } from "../utils/apiHelper";
 import { toast } from "react-toastify";
+import { isBlank } from "../utils/util";
+import { useGlobalDispatch } from "../providers/GlobalState";
 
 const RegisterPage = () => {
   const navigate = useNavigate();
+  const dispatch = useGlobalDispatch();
 
+  const [name, setUserName] = useState("");
+  const [surname, setSurname] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
   const [userConfirmPassword, setUserConfirmPassword] = useState("");
 
+  const handleSuccess = (name) => {
+    toast.success(`Successfully registered, Welcome ${name}`);
+    return navigate("/");
+  };
+
+  const handleError = (error) => {
+    toast.error(`${error}`);
+    return navigate("/");
+  };
+
   const submitForm = (e) => {
     e.preventDefault();
-    const loginData = {
-      userEmail,
-      userPassword,
+    const registerData = {
+      name,
+      surname,
+      email:userEmail,
+      password:userPassword,
     };
 
-    if (userPassword === userConfirmPassword) {
-      registerUser(loginData);
-
-      toast.success("Successfully registered");
-
-      return navigate("/");
+    if (!isBlank(name) && !isBlank(surname)) {
+      if (userPassword === userConfirmPassword) {
+        registerUser({ registerData, handleSuccess, handleError , dispatch });
+      } else {
+        toast.error("Passwords dont match");
+      }
     } else {
-      toast.error("Passwords dont match");
+      toast.error("One or more fields are empty");
     }
   };
 
@@ -37,6 +54,43 @@ const RegisterPage = () => {
             <h2 className="text-3xl text-center font-semibold mb-6">
               Lets get you started
             </h2>
+
+            <div className="mb-4">
+              <label
+                htmlFor="contact_email"
+                className="block text-gray-700 font-bold mb-2"
+              >
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                className="border rounded w-full py-2 px-3"
+                placeholder="First Name"
+                required
+                value={name}
+                onChange={(e) => setUserName(e.target.value)}
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="contact_email"
+                className="block text-gray-700 font-bold mb-2"
+              >
+                Surname
+              </label>
+              <input
+                type="text"
+                id="surname"
+                name="surname"
+                className="border rounded w-full py-2 px-3"
+                placeholder="Last Name"
+                required
+                value={surname}
+                onChange={(e) => setSurname(e.target.value)}
+              />
+            </div>
 
             <div className="mb-4">
               <label
